@@ -20,8 +20,8 @@ public class Servidor implements Runnable{
             cliente = server.accept();
             dos = new DataOutputStream(cliente.getOutputStream());
             dis = new DataInputStream(cliente.getInputStream());
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        } catch (IOException io) {
+            io.printStackTrace();
         }
     }
 

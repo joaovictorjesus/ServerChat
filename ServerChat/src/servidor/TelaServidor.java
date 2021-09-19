@@ -1,7 +1,7 @@
 package servidor;
 
-import javax.swing.JPanel;
-import servidor.Servidor;
+import javax.swing.JTextArea;
+//import servidor.Servidor;
 
 public class TelaServidor extends javax.swing.JFrame {
     
@@ -12,7 +12,7 @@ public class TelaServidor extends javax.swing.JFrame {
         this.servidor = servidor;        
     }
 
-    public JPanel getTxtArea() {
+    public JTextArea getTxtArea() {
         return txtArea;
     }
 
@@ -20,23 +20,13 @@ public class TelaServidor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txtArea = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtCampo = new javax.swing.JTextPane();
         jButton1 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtArea = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        javax.swing.GroupLayout txtAreaLayout = new javax.swing.GroupLayout(txtArea);
-        txtArea.setLayout(txtAreaLayout);
-        txtAreaLayout.setHorizontalGroup(
-            txtAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        txtAreaLayout.setVerticalGroup(
-            txtAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 275, Short.MAX_VALUE)
-        );
 
         jScrollPane1.setViewportView(txtCampo);
 
@@ -47,6 +37,10 @@ public class TelaServidor extends javax.swing.JFrame {
             }
         });
 
+        txtArea.setColumns(20);
+        txtArea.setRows(5);
+        jScrollPane2.setViewportView(txtArea);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -54,7 +48,7 @@ public class TelaServidor extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtArea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -65,8 +59,8 @@ public class TelaServidor extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txtArea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE))
@@ -90,7 +84,8 @@ public class TelaServidor extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JPanel txtArea;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea txtArea;
     private javax.swing.JTextPane txtCampo;
     // End of variables declaration//GEN-END:variables
 }
